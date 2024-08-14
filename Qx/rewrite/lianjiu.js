@@ -6,7 +6,7 @@
 
 [rewrite_local]
 
-^https:\/\/api\.lianjiu\.fun\/app\/api\/v1\/profile url script-response-body https://gitee.com/uniqueww/script/raw/master/rewrite/lianjiu.js
+^https:\/\/api\.lianjiu\.fun\/app\/api\/v1\/profile url script-response-body https://raw.githubusercontent.com/uniqueww/Scripts/master/Qx/rewrite/lianjiu.js
 
 [mitm]
 hostname = api.lianjiu.fun
