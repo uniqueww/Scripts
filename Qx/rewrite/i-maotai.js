@@ -7,7 +7,7 @@
  * 环境变量：export MT_PROVINCE="广东省"  // 省份
  * 环境变量：export MT_CITY="广州市"  // 城市
  * 环境变量：export MT_DISTRICT="天河区|海珠区"  // 需要申购的区域，多个区域以 | 隔开，留空为随机申购全市所有门店
- * 环境变量：export MT_ITEM_BLACK="2478|10056"  // 申购商品ID黑名单，多个ID以 | 隔开，留空为随机申购所有商品
+ * 环境变量：export MT_ITEM_BLACK="2478|10941"  // 申购商品ID黑名单，多个ID以 | 隔开，留空为随机申购所有商品
  * 环境变量：export MT_VERSION="1.4.9"  // APP版本号 非必填
  * 环境变量：export MT_USERAGENT="iOS;16.1.2;Apple;?unrecognized?"  // User-Agent 非必填
  * 环境变量：export MT_R="clips_OlU6TmFRag5rCXwbNAQ/Tz1SKlN8THcecBp/HGhHdw=="  // 非必填
@@ -83,7 +83,7 @@ let productInfo = [], message = '', CookieArr = [], Cookie = '', DeviceID = '';
 let MT_PROVINCE = $.getdata('MT_PROVINCE') || '广东省';
 let MT_CITY = $.getdata('MT_CITY') || '广州市';
 let MT_DISTRICT = $.getdata('MT_DISTRICT') || '';
-let MT_ITEM_BLACK = $.getdata('MT_ITEM_BLACK') || '2478|10056';
+let MT_ITEM_BLACK = $.getdata('MT_ITEM_BLACK') || '2478|10941';
 let MT_TOKENS = $.getdata('MT_TOKENS') || '';
 let MT_VERSION = $.getdata('MT_VERSION') || '1.4.9';
 let MT_USERAGENT = $.getdata('MT_USERAGENT') || 'iOS;16.1.2;Apple;?unrecognized?';
@@ -362,7 +362,7 @@ function getSessionId() {
 function getShopInfo() {
   console.log(`获取[${MT_PROVINCE + MT_CITY + MT_DISTRICT}]门店库存:\n`);
   let opt = {
-    url: `https://static.moutai519.com.cn/mt-backend/xhr/front/mall/shop/list/slim/v3/${$.sessionId}/${encodeURIComponent(MT_PROVINCE)}/10056/${zeroDate}`,
+    url: `https://static.moutai519.com.cn/mt-backend/xhr/front/mall/shop/list/slim/v3/${$.sessionId}/${encodeURIComponent(MT_PROVINCE)}/10941/${zeroDate}`,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     }
