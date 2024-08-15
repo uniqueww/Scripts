@@ -168,7 +168,7 @@ if ($.isNode()) {
     await getLatestVersion();  // 获取最新版本
     await getUserInfo();  // 获取用户信息
     if ($.userName) {
-      let randomInt = Math.floor(Math.random() * 300);  // 随机等待 0-300 秒
+      let randomInt = Math.floor(Math.random() * 60);  // 随机等待 0-60 秒
       console.log(`随机等待 ${randomInt} 秒\n`);
       await $.wait(randomInt * 1000);
       for (const itemID of $.itemCodes) {
