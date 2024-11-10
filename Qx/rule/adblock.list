@@ -1,0 +1,4 @@
+#spotify播放广告拦截
+DOMAIN,spclient.wg.spotify.com
+DOMAIN,weblb-wg.gslb.spotify.com
+DOMAIN,adeventtracker.spotify.com
